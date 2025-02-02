@@ -3,7 +3,8 @@ echo "Install system deps"
 echo ""
 
 apt install python3-pip
-python -m ensurepip --default-pip
+apt install python3-venv
+python3 -m ensurepip --default-pip
 
 echo "setup python env"
 
