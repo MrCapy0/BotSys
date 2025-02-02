@@ -11,7 +11,6 @@ firefox_path = os.getenv("FIREFOX_EXECUTABLE_DIRECTORY")
 if firefox_path == '':
     firefox_path = None
 
-service = webdriver.FirefoxService(executable_path=firefox_path)
 options = webdriver.FirefoxOptions()
 options.profile = webdriver.FirefoxProfile(profile_path)
 driver = webdriver.Firefox(options=options)
