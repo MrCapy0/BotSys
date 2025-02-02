@@ -1,5 +1,3 @@
-python3 main.py
-
 echo "setup python env"
 
 python3 -m venv ./venv

@@ -1,3 +1,8 @@
 RUN TO SETUP THE ENVIRONMENT FIRST:
 
-source ./setup-env.sh 
+sudo su
+./setup-env.sh 
+
+AND ON A NEW TERMINAL, RUN:
+
+source ./run.sh
