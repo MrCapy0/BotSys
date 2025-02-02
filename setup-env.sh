@@ -6,24 +6,5 @@ apt install python3-pip
 apt install python3-venv
 python3 -m ensurepip --default-pip
 
-echo "setup python env"
-
-python3 -m venv ./venv
-source ./venv/bin/activate
-
-echo ""
-echo "installing libs"
-
-pip install selenium
-pip install python-dotenv
-
-echo ""
-
-echo "running..."
 
 chmod +x run.sh
-./run.sh
-
-echo ""
-echo ""
-echo ""
