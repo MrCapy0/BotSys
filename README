@@ -1,0 +1,3 @@
+RUN TO SETUP THE ENVIRONMENT FIRST:
+
+source ./setup-env.sh 
