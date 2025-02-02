@@ -1,5 +1,3 @@
-sudo su
-
 echo ""
 echo "Install system deps"
 echo ""
