@@ -8,6 +8,8 @@ echo "installing libs"
 
 pip install selenium
 pip install python-dotenv
+pip install pynput
+pip install screeninfo
 
 echo ""
 
