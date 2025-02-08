@@ -1,3 +1,9 @@
-1. sudo ./setup-system.sh (EXECUTE 2 TIMES)
-2. source ./setup-env.sh
-3. source ./run.sh
+1. apt update
+2. apt install curl
+
+3. install pyenv
+    https://github.com/pyenv/pyenv
+
+4. sudo ./setup-system.sh (EXECUTE 2 TIMES)
+5. source ./setup-env.sh
+6. source ./run.sh
