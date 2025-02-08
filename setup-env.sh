@@ -1,9 +1,9 @@
-echo ""
-echo "Install system deps"
-echo ""
+pyenv uninstall 3.10.6
 
-apt install python3-pip
-apt install python3-venv
-python3 -m ensurepip --default-pip
+env PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.12.3
 
-chmod +x run.sh
+rm -rf ./venv
+
+python -m venv ./venv
+
+source ./venv/bin/activate
