@@ -2,6 +2,8 @@ echo ""
 echo "Install system deps"
 echo ""
 
+curl -fsSL https://pyenv.run | bash
+
 apt update
 apt install python3-pip
 apt install python3-venv

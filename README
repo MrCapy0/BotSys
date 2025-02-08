@@ -1,5 +1,3 @@
-1. sudo su
-2. ./setup-system.sh
-3. open new TERMINAL
-4. source ./setup-env.sh
-5. source ./run.sh
+1. sudo ./setup-system.sh
+2. source ./setup-env.sh
+3. source ./run.sh
