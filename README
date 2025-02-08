@@ -4,6 +4,8 @@
 3. install pyenv
     https://github.com/pyenv/pyenv
 
+setup https://dev.to/xshapira/using-tkinter-with-pyenv-a-simple-two-step-guide-hh5
+
 4. sudo ./setup-system.sh (EXECUTE 2 TIMES)
 5. source ./setup-env.sh
 6. source ./run.sh
