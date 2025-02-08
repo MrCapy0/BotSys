@@ -1,3 +1,3 @@
-1. sudo ./setup-system.sh
+1. sudo ./setup-system.sh (EXECUTE 2 TIMES)
 2. source ./setup-env.sh
 3. source ./run.sh
