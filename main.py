@@ -2,9 +2,15 @@ import time
 import os
 import random
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from dotenv import load_dotenv
 from pynput.mouse import Button, Controller
 import screeninfo
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+import pyautogui
+
 
 load_dotenv()
 
@@ -25,39 +31,59 @@ driver.get("https://open.spotify.com/collection/tracks")
 
 time.sleep(5)
 
-mouse = Controller()
-#mouse.position = (500, 500)  # Define a posição do mouse para (x=500, y=500)
-#mouse.click(Button.left)
-
 driver.fullscreen_window()
 
 screen = screeninfo.get_monitors()[0]  
 screen_width = screen.width
 screen_height = screen.height
-mouse_position_x, mouse_position_y = mouse.position
-mouse_position_y /= screen_height
-mouse_position_x /= screen_width
 
 time.sleep(5)
 
+is_first_play = True
+
+
+
+time.sleep(3)
+
 while True:
 
-    mouse_position_x, mouse_position_y = mouse.position
-    mouse_position_y /= screen_height
-    mouse_position_x /= screen_width
-    print(mouse_position_x, mouse_position_y)
-    print (screen_width, screen_height)
+    if driver.current_url != 'https://open.spotify.com/collection/tracks':
+        time.sleep(4)
 
+        is_first_play = True
+        driver.get("https://open.spotify.com/collection/tracks")
+
+    # if is_first_play:
+    #     first_play_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".Button-sc-qlcn5g-0.iPAIAO.e-9541-button-primary.e-9541-button")))
+    #     first_play_button.click()
+    #     is_first_play = False
+
+    # play_button = driver.find_element(By.CSS_SELECTOR, ".Button-sc-qlcn5g-0.iPAIAO.e-9541-button-primary.e-9541-button")
+    # next_button = driver.find_element(By.CSS_SELECTOR, ".Button-sc-1dqy6lx-0.ijaVit.e-9541-overflow-wrap-anywhere")
+
+    # random_action = random.randint(0, 10)
+    # if random_action < 5:
+    #     play_button.click()
+    # else:
+    #     next_button.click()
+    #     time.sleep(5)
+    #     play_button.click()
+
+    #     print("click")
+
+    time.sleep(1)
     mouse_position_x = 0.5 * screen_width
     mouse_position_y = 0.95 * screen_height
-    mouse.position = (mouse_position_x, mouse_position_y)
 
-    mouse_position_x, mouse_position_y = mouse.position
-    mouse_position_y /= screen_height
-    mouse_position_x /= screen_width
-    print(mouse_position_x, mouse_position_y)
-    print('-----')
+    pyautogui.moveTo(mouse_position_x, mouse_position_y)
+    
 
-    mouse.click(Button.left)
-    time.sleep(random.randrange(10.0, 100.0))
+    # mouse_position_x, mouse_position_y = 0, 0
+    # mouse_position_y /= screen_height
+    # mouse_position_x /= screen_width
+    # print(mouse_position_x, mouse_position_y)
+    # print('-----')
+
+    pyautogui.click()
+    time.sleep(random.uniform(5.0, 10.0))
 

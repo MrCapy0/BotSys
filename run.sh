@@ -9,7 +9,9 @@ echo "installing libs"
 pip install selenium
 pip install python-dotenv
 pip install pynput
+pip install pyautogui
 pip install screeninfo
+pip install tk
 
 echo ""
 
