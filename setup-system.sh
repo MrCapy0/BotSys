@@ -20,6 +20,14 @@ if [ ! -d "/root/.pyenv" ]; then
     echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
     echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
     exec "$SHELL"
+
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
+    echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
+    echo 'eval "$(pyenv init - bash)"' >> ~/.profile
+
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+    echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+    echo 'eval "$(pyenv init - bash)"' >> ~/.bash_profile
 fi
 
 apt update; apt install build-essential libssl-dev zlib1g-dev \
@@ -44,6 +52,6 @@ xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
 
 
 echo ""
-echo "ADD PERMISSION TO RUN run.sh"
+echo "ADDED PERMISSION TO RUN run.sh"
 echo ""
 chmod +x run.sh
